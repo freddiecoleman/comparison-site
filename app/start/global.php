@@ -6,15 +6,17 @@
 |--------------------------------------------------------------------------
 |
 | In addition to using Composer, you may use the Laravel class loader to
-| load your controllers and models. This is useful for keeping all of
+| load your Controllers and models. This is useful for keeping all of
 | your classes in the "global" namespace without Composer updating.
 |
 */
 
+View::addNamespace('admin', __DIR__.'/../Site/Admin/Views');
+
 ClassLoader::addDirectories(array(
 
 	app_path().'/commands',
-	app_path().'/controllers',
+	app_path().'/Controllers',
 	app_path().'/models',
 	app_path().'/database/seeds',
 
@@ -39,7 +41,7 @@ Log::useFiles(storage_path().'/logs/laravel.log');
 |--------------------------------------------------------------------------
 |
 | Here you may handle any errors that occur in your application, including
-| logging them or displaying custom views for specific errors. You may
+| logging them or displaying custom Views for specific errors. You may
 | even register several error handlers to handle different types of
 | exceptions. If nothing is returned, the default error view is
 | shown, which includes a detailed stack trace during debug.
