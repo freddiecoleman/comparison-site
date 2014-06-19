@@ -68,57 +68,14 @@
                         {{ Form::text('rooturl', Request::root(), array('class' => 'form-control')); }}
                     </div>
                 </div>
-                <h4>Database connection</h4><hr>
-                <div class="form-group">
-                    {{ Form::label('hostname', 'Hostname: ', array('class' => 'col-sm-4 control-label')) }}
-                    <div class="col-sm-8">
-                        {{ Form::text('hostname', null, array('class' => 'form-control')); }}
-                    </div>
-                </div>
-                <div class="form-group">
-                    {{ Form::label('database', 'Database name: ', array('class' => 'col-sm-4 control-label')) }}
-                    <div class="col-sm-8">
-                        {{ Form::text('database', null, array('class' => 'form-control')); }}
-                    </div>
-                </div>
-                <div class="form-group">
-                    {{ Form::label('dbuser', 'Username: ', array('class' => 'col-sm-4 control-label')) }}
-                    <div class="col-sm-8">
-                        {{ Form::text('dbuser', null, array('class' => 'form-control')); }}
-                    </div>
-                </div>
-                <div class="form-group">
-                    {{ Form::label('dbpass', 'Password: ', array('class' => 'col-sm-4 control-label')) }}
-                    <div class="col-sm-8">
-                        {{ Form::password('dbpass', array('class' => 'form-control')); }}
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <h4>Create admin account</h4><hr>
-                <div class="form-group">
-                    {{ Form::label('username', 'Username: ', array('class' => 'col-sm-4 control-label')) }}
-                    <div class="col-sm-8">
-                        {{ Form::text('username', null, array('class' => 'form-control')); }}
-                    </div>
-                </div>
-                <div class="form-group">
-                    {{ Form::label('password', 'Password: ', array('class' => 'col-sm-4 control-label')) }}
-                    <div class="col-sm-8">
-                        {{ Form::password('password', array('class' => 'form-control')); }}
-                    </div>
-                </div>
-                <div class="form-group">
-                    {{ Form::label('confirm', 'Confirm: ', array('class' => 'col-sm-4 control-label')) }}
-                    <div class="col-sm-8">
-                        {{ Form::password('confirm', array('class' => 'form-control')); }}
-                    </div>
-                </div>
-                <div class="form-group">
+                 <div class="form-group">
                     <div class="col-sm-offset-4 col-sm-8">
                         {{ Form::submit('Submit', array('class' => 'btn btn-default')); }}
                     </div>
                 </div>
+            </div>
+            <div class="col-md-6">
+
             </div>
             {{ Form::close() }}
         </div>
