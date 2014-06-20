@@ -16,5 +16,5 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
-Route::get('/admin/settings', 'Site\Admin\Controllers\SettingsController@index');
-Route::get('/admin/settings/subjects', 'Site\Admin\Controllers\SubjectController@index');
+Route::get('/admin/settings', array('as' => 'siteConfig', 'uses' => 'Site\Admin\Controllers\SettingsController@index'));
+Route::get('/admin/settings/subjects', array('as' => 'subjects', 'uses' => 'Site\Admin\Controllers\SubjectController@index'));

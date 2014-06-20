@@ -11,8 +11,8 @@
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Site Config</a></li>
-            <li><a href="#about">Subjects</a></li>
+            <li class="active">{{ link_to_route('siteConfig', 'Site Config') }}</li>
+            <li>{{ link_to_route('subjects', 'Subjects') }}</li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
