@@ -68,6 +68,25 @@
                         {{ Form::text('rooturl', Request::root(), array('class' => 'form-control')); }}
                     </div>
                 </div>
+                <div class="form-group">
+                    {{ Form::label('subject', 'Subjects: ', array('class' => 'col-sm-4 control-label')) }}
+                    <div class="col-sm-8">
+                        {{ Form::select('subject[]', array('Car insurance', 'Travel insurance'), null, array('multiple' => 'true', 'class' => 'form-control')); }}
+                    </div>
+                </div>
+                <div class="form-group">
+                    {{ Form::label(null, null, array('class' => 'col-sm-4 control-label')) }}
+                    <div class="col-sm-8">
+                        {{ Form::text('addSubject', null, array('class' => 'form-control', 'placeholder' => 'Add new subject')); }}
+                    </div>
+                </div>
+                <div class="form-group">
+                    {{ Form::label(null, null, array('class' => 'col-sm-4 control-label')) }}
+                    <div class="col-sm-8">
+                        {{ link_to('#', 'Add', array('class' => 'btn btn-info')); }}
+                        {{ link_to('#', 'Delete', array('class' => 'btn btn-danger')); }}
+                    </div>
+                </div>
                  <div class="form-group">
                     <div class="col-sm-offset-4 col-sm-8">
                         {{ Form::submit('Submit', array('class' => 'btn btn-default')); }}
