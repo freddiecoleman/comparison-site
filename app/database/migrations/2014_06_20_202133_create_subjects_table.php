@@ -16,7 +16,7 @@ class CreateSubjectsTable extends Migration {
 		{
 			$table->increments('id');
             $table->string('name');
-            $table->integer('type');
+            $table->integer('type'); // e.g. product, service, etc. configurable via CMS. Foreign key..
 			$table->timestamps();
 		});
 	}

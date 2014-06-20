@@ -71,8 +71,7 @@
                 <div class="form-group">
                     {{ Form::label('subject', 'Subjects: ', array('class' => 'col-sm-4 control-label')) }}
                     <div class="col-sm-8">
-
-                        {{ Form::select('subject[]', array('Car insurance', 'Travel insurance'), null, array('multiple' => 'true', 'class' => 'form-control')); }}
+                        {{ Form::select('subject[]', $subjects, null, array('multiple' => 'true', 'class' => 'form-control')); }}
                     </div>
                 </div>
                 <div class="form-group">

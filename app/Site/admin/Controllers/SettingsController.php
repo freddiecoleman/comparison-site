@@ -1,6 +1,8 @@
 <?php
 namespace Site\Admin\Controllers;
 
+use Site\Admin\Models\Subjects;
+
 class SettingsController extends \BaseController {
 
 	/**
@@ -10,7 +12,7 @@ class SettingsController extends \BaseController {
 	 */
 	public function index()
 	{
-        $subjects = Subject::all();
+        $subjects = Subjects::all();
 		return \View::make('admin::settings')->with($subjects);
 	}
 
