@@ -71,6 +71,7 @@
                 <div class="form-group">
                     {{ Form::label('subject', 'Subjects: ', array('class' => 'col-sm-4 control-label')) }}
                     <div class="col-sm-8">
+
                         {{ Form::select('subject[]', array('Car insurance', 'Travel insurance'), null, array('multiple' => 'true', 'class' => 'form-control')); }}
                     </div>
                 </div>
@@ -83,8 +84,8 @@
                 <div class="form-group">
                     {{ Form::label(null, null, array('class' => 'col-sm-4 control-label')) }}
                     <div class="col-sm-8">
-                        {{ link_to('#', 'Add', array('class' => 'btn btn-info')); }}
-                        {{ link_to('#', 'Delete', array('class' => 'btn btn-danger')); }}
+                        {{ link_to('#', 'Add', array('class' => 'btn btn-info col-sm-5')); }}
+                        {{ link_to('#', 'Delete', array('class' => 'btn btn-danger col-sm-5 col-sm-offset-2 ')); }}
                     </div>
                 </div>
                  <div class="form-group">
