@@ -13,7 +13,7 @@ class SettingsController extends \BaseController {
 	public function index()
 	{
         $subjects = Subjects::all();
-		return \View::make('admin::settings')->with($subjects);
+		return \View::make('admin::settings')->with(array('subjects' => $subjects));
 	}
 
 

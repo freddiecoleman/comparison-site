@@ -71,7 +71,11 @@
                 <div class="form-group">
                     {{ Form::label('subject', 'Subjects: ', array('class' => 'col-sm-4 control-label')) }}
                     <div class="col-sm-8">
-                        {{ Form::select('subject[]', $subjects, null, array('multiple' => 'true', 'class' => 'form-control')); }}
+                        <select multiple="true" class="form-control" name="subject[]">
+                        @foreach ($subjects as $subject)
+                            <option value="{{ $subject->id }}">{{ $subject->name }}</option>
+                        @endforeach
+                        </select>
                     </div>
                 </div>
                 <div class="form-group">
