@@ -3,7 +3,7 @@ namespace Site\Admin\Controllers;
 
 use Site\Admin\Models\Subject;
 
-class SettingsController extends \BaseController {
+class SubjectController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -13,7 +13,7 @@ class SettingsController extends \BaseController {
 	public function index()
 	{
         $subjects = Subject::all();
-		return \View::make('admin::settings')->with(array('subjects' => $subjects));
+        return \View::make('admin::subject')->with(array('subjects' => $subjects));
 	}
 
 

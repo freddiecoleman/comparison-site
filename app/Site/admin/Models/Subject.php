@@ -2,7 +2,7 @@
 
 namespace Site\Admin\Models;
 
-class Subjects extends \Eloquent {
+class Subject extends \Eloquent {
     protected $table = 'subjects';
 }
 

@@ -17,3 +17,4 @@ Route::get('/', function()
 });
 
 Route::get('/admin/settings', 'Site\Admin\Controllers\SettingsController@index');
+Route::get('/admin/settings/subjects', 'Site\Admin\Controllers\SubjectController@index');
