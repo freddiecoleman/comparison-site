@@ -17,7 +17,7 @@
                         @foreach ($subjects as $subject)
                         <tr>
                             <td>{{ $subject->name }}</td>
-                            <td>Service</td>
+                            <td>{{ $subject->type->name }}</td>
                             <td>
                                 {{ link_to('#', 'Edit', array('class' => 'btn btn-success')); }}
                                 {{ link_to('#', 'Delete', array('class' => 'btn btn-danger')); }}

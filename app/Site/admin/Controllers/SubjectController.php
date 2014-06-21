@@ -5,11 +5,6 @@ use Site\Admin\Models\Subject;
 
 class SubjectController extends \BaseController {
 
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
 	public function index()
 	{
         $subjects = Subject::all();
