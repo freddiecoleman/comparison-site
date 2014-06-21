@@ -9,7 +9,7 @@
                     <thead>
                         <tr>
                             <th>Name</th>
-                            <th>Type</th>
+                            <th>Attributes</th>
                             <th>Tools</th>
                         </tr>
                     </thead>
@@ -17,7 +17,13 @@
                         @foreach ($types as $type)
                         <tr>
                             <td>{{ $type->name }}</td>
-                            <td>Service</td>
+                            <td>
+                            <ul>
+                                <li>x</li>
+                                <li>y</li>
+                                <li>z</li>
+                            </ul>
+                            </td>
                             <td>
                                 {{ link_to('#', 'Edit', array('class' => 'btn btn-success')); }}
                                 {{ link_to('#', 'Delete', array('class' => 'btn btn-danger')); }}
