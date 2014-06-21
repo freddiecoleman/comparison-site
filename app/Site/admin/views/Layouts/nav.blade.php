@@ -13,7 +13,7 @@
           <ul class="nav navbar-nav">
             <li class="active">{{ link_to_route('siteConfig', 'Site Config') }}</li>
             <li>{{ link_to_route('subjects', 'Subjects') }}</li>
-            <li><a href="#contact">Contact</a></li>
+            <li>{{ link_to_route('attributes', 'Attributes') }}</li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
