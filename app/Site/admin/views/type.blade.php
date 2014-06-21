@@ -4,7 +4,7 @@
         <div class="row">
             {{ Form::open(array('class' => 'form-horizontal')) }}
             <div class="col-md-12">
-                <h4>Subjects</h4><hr>
+                <h4>Types</h4><hr>
                 <table class="table table-striped">
                     <thead>
                         <tr>
@@ -14,9 +14,9 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($subjects as $subject)
+                        @foreach ($types as $type)
                         <tr>
-                            <td>{{ $subject->name }}</td>
+                            <td>{{ $type->name }}</td>
                             <td>Service</td>
                             <td>
                                 {{ link_to('#', 'Edit', array('class' => 'btn btn-success')); }}
@@ -30,7 +30,7 @@
                 <div class="form-group">
                     {{ Form::label(null, null, array('class' => 'col-sm-4 control-label')) }}
                     <div class="col-sm-6">
-                        {{ Form::text('addSubject', null, array('class' => 'form-control', 'placeholder' => 'Add new subject')); }}
+                        {{ Form::text('addSubject', null, array('class' => 'form-control', 'placeholder' => 'Add new type')); }}
                     </div>
                     <div class="col-sm-2">
                         {{ link_to('#', 'Add', array('class' => 'btn btn-info col-sm-4 btn-block')); }}
