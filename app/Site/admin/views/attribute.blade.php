@@ -16,13 +16,9 @@
                     <tbody>
                         @foreach ($attributes as $attribute)
                         <tr>
-                            <td>{{ $type->name }}</td>
+                            <td>{{ $attribute->name }}</td>
                             <td>
-                            <ul>
-                                <li>x</li>
-                                <li>y</li>
-                                <li>z</li>
-                            </ul>
+                            xxx
                             </td>
                             <td>
                                 {{ link_to('#', 'Edit', array('class' => 'btn btn-success')); }}
