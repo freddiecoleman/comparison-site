@@ -19,9 +19,9 @@
                             <td>{{ $type->name }}</td>
                             <td>
                             <ul>
-                                <li>x</li>
-                                <li>y</li>
-                                <li>z</li>
+                            @foreach ($type->attributes as $attribute)
+                                <li>{{ $attribute->name }}</li>
+                            @endforeach
                             </ul>
                             </td>
                             <td>
