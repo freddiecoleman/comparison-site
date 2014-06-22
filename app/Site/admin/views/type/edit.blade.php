@@ -2,18 +2,27 @@
 @section('content')
     <div class="container">
         <div class="row">
-            {{ Form::open(array('class' => 'form-horizontal')) }}
             <div class="col-md-6">
+                {{ Form::open(array('class' => 'form-horizontal')) }}
                 <h4>Edit Type</h4><hr>
                 <div class="form-group">
-                    {{ Form::label('name', 'Type name: ', array('class' => 'col-sm-4 control-label')) }}
-                    <div class="col-sm-8">
+                    {{ Form::label('name', 'Type name: ', array('class' => 'col-sm-3 control-label')) }}
+                    <div class="col-sm-9">
                         {{ Form::text('name', $type->name, array('class' => 'form-control')) }}
                     </div>
                 </div>
                 <div class="form-group">
-                    {{ Form::label('attribute', 'Attributes: ', array('class' => 'col-sm-4 control-label')) }}
-                    <div class="col-sm-8">
+                    <div class="col-sm-offset-3 col-sm-8">
+                        {{ Form::submit('Update', array('class' => 'btn btn-default')); }}
+                    </div>
+                </div>
+                {{ Form::close() }}
+            </div>
+            <div class="col-md-6">
+                {{ Form::open(array('action' => array('addAttribute', $type->id), 'class' => 'form-horizontal')) }}
+                <h4>Attributes</h4><hr>
+                <div class="form-group">
+                    <div class="col-sm-12">
                         <table class="table table-striped">
                             <tbody>
                             @foreach ($type->attributes as $attribute)
@@ -28,21 +37,13 @@
                                 {{ Form::select('attribute', $attributes, $type, array('class' => 'col-sm-4 form-control')) }}
                             </div>
                             <div class="col-md-3">
-                                {{ link_to('#', 'Add', array('class' => 'btn btn-success')); }}
+                                {{ Form::submit('Add', array('class' => 'btn btn-success')); }}
                             </div>
                         </div>
                     </div>
                 </div>
-                 <div class="form-group">
-                    <div class="col-sm-offset-4 col-sm-8">
-                        {{ Form::submit('Update', array('class' => 'btn btn-default')); }}
-                    </div>
-                </div>
+                {{ Form::close() }}
             </div>
-            <div class="col-md-6">
-
-            </div>
-            {{ Form::close() }}
         </div>
 
 

@@ -35,6 +35,15 @@ class TypeController extends \BaseController {
         return Redirect::route('types'); // change later to direct back with flash message
     }
 
+    public function addAttribute($id)
+    {
+        $type = Type::find($id);
+
+        $type->attributes()->attach(Input::get('attribute'));
+
+        return Redirect::route('types'); // change later to direct back with flash message
+    }
+
 
 	/**
 	 * Remove the specified resource from storage.
