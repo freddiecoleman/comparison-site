@@ -5,6 +5,7 @@ use Site\Admin\Models\Type;
 use Site\Admin\Models\Attribute;
 use Input;
 use Redirect;
+use Session;
 
 class TypeController extends \BaseController {
 
@@ -32,7 +33,9 @@ class TypeController extends \BaseController {
         $type->name = Input::get('name');
         $type->save();
 
-        return Redirect::route('types'); // change later to direct back with flash message
+        Session::flash('message', 'Type updated.');
+
+        return Redirect::back();
     }
 
     public function addAttribute($id)
@@ -41,7 +44,9 @@ class TypeController extends \BaseController {
 
         $type->attributes()->attach(Input::get('attribute'));
 
-        return Redirect::route('types'); // change later to direct back with flash message
+        Session::flash('message', 'Attribute added.');
+
+        return Redirect::back();
     }
 
     public function removeAttribute($id, $attribute)
@@ -51,7 +56,9 @@ class TypeController extends \BaseController {
 
         $type->attributes()->detach($attribute);
 
-        return Redirect::route('types'); // change later to direct back with flash message
+        Session::flash('message', 'Attribute removed.');
+
+        return Redirect::back();
     }
 
 
