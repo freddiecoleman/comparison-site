@@ -30,7 +30,7 @@
                 <div class="form-group">
                     {{ Form::label(null, null, array('class' => 'col-sm-4 control-label')) }}
                     <div class="col-sm-3">
-                        {{ Form::text('name', null, array('class' => 'form-control', 'placeholder' => 'Add new subject')); }}
+                        {{ Form::text('name', null, array('class' => 'form-control', 'placeholder' => 'Create new subject')); }}
                     </div>
                     <div class="col-sm-3">
                         {{ Form::select('type', $types, null, array('class' => 'form-control')) }}
