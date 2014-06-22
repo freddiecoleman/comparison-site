@@ -27,7 +27,7 @@
                             <tbody>
                             @foreach ($type->attributes as $attribute)
                                 <tr>
-                                    <td>{{ $attribute-> name }}</td><td>{{ link_to('#', 'Remove', array('class' => 'btn btn-danger btn-xs')); }}</td>
+                                    <td>{{ $attribute-> name }}</td><td>{{ link_to_route('removeAttribute', 'Remove', array($type->id, $attribute->id), array('class' => 'btn btn-danger btn-xs')); }}</td>
                                 </tr>
                             @endforeach
                             </tbody>

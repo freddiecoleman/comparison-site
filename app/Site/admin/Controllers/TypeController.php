@@ -44,6 +44,16 @@ class TypeController extends \BaseController {
         return Redirect::route('types'); // change later to direct back with flash message
     }
 
+    public function removeAttribute($id, $attribute)
+    {
+
+        $type = Type::find($id);
+
+        $type->attributes()->detach($attribute);
+
+        return Redirect::route('types'); // change later to direct back with flash message
+    }
+
 
 	/**
 	 * Remove the specified resource from storage.
