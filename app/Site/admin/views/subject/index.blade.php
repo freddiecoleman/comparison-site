@@ -29,11 +29,14 @@
                 </table>
                 <div class="form-group">
                     {{ Form::label(null, null, array('class' => 'col-sm-4 control-label')) }}
-                    <div class="col-sm-6">
-                        {{ Form::text('addSubject', null, array('class' => 'form-control', 'placeholder' => 'Add new subject')); }}
+                    <div class="col-sm-3">
+                        {{ Form::text('name', null, array('class' => 'form-control', 'placeholder' => 'Add new subject')); }}
+                    </div>
+                    <div class="col-sm-3">
+                        {{ Form::select('type', $types, null, array('class' => 'form-control')) }}
                     </div>
                     <div class="col-sm-2">
-                        {{ link_to('#', 'Add', array('class' => 'btn btn-info col-sm-4 btn-block')); }}
+                        {{ Form::submit('Create', array('class' => 'btn btn-info col-sm-4 btn-block')); }}
                     </div>
                 </div>
             </div>

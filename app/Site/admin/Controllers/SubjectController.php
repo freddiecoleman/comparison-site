@@ -12,7 +12,8 @@ class SubjectController extends \BaseController {
 	public function index()
 	{
         $subjects = Subject::all();
-        return \View::make('admin::subject.index')->with(array('subjects' => $subjects));
+        $types = Type::lists('name', 'id');
+        return \View::make('admin::subject.index')->with(array('subjects' => $subjects, 'types' => $types));
 	}
 
 	public function edit($id)
@@ -38,6 +39,18 @@ class SubjectController extends \BaseController {
 
         return Redirect::back();
 	}
+
+    public function create(){
+        $subject = new Subject;
+        $subject->name = Input::get('name');
+        $subject->type_id = Input::get('type');
+
+        $subject->save();
+
+        Session::flash('message', 'Subject created.');
+
+        return Redirect::back();
+    }
 
 	public function destroy($id)
 	{
