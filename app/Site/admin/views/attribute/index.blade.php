@@ -21,7 +21,7 @@
                             xxx
                             </td>
                             <td>
-                                {{ link_to('#', 'Edit', array('class' => 'btn btn-success btn-xs')); }}
+                                {{ link_to('/admin/attribute/'.$attribute->id, 'Edit', array('class' => 'btn btn-success btn-xs')); }}
                                 {{ link_to('#', 'Delete', array('class' => 'btn btn-danger btn-xs')); }}
                             </td>
                         </tr>
