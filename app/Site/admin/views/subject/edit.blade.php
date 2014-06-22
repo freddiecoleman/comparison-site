@@ -1,6 +1,9 @@
 @extends('admin::layouts.default')
 @section('content')
     <div class="container">
+    @if (Session::has('message'))
+        <div class="alert alert-info">{{ Session::get('message') }}</div>
+    @endif
         <div class="row">
             {{ Form::open(array('class' => 'form-horizontal')) }}
             <div class="col-md-6">

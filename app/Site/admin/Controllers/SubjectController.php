@@ -5,6 +5,7 @@ use Site\Admin\Models\Subject;
 use Site\Admin\Models\Type;
 use Input;
 use Redirect;
+use Session;
 
 class SubjectController extends \BaseController {
 
@@ -33,7 +34,9 @@ class SubjectController extends \BaseController {
 
         $subject->save();
 
-        return Redirect::route('subjects'); // change later to direct back with flash message
+        Session::flash('message', 'Subject updated.');
+
+        return Redirect::back();
 	}
 
 	public function destroy($id)
