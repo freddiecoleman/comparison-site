@@ -17,5 +17,6 @@ Route::post('/admin/type/{id}', array('as' => 'updateType', 'uses' => 'Site\Admi
 Route::post('/admin/type/{id}/attribute/add', array('as' => 'addAttribute', 'uses' => 'Site\Admin\Controllers\TypeController@addAttribute'));
 Route::get('/admin/type/{id}/attribute/{attribute}/remove', array('as' => 'removeAttribute', 'uses' => 'Site\Admin\Controllers\TypeController@removeAttribute'));
 Route::get('/admin/attributes', array('as' => 'attributes', 'uses' => 'Site\Admin\Controllers\AttributeController@index'));
+Route::post('/admin/attributes', array('as' => 'createAttribute', 'uses' => 'Site\Admin\Controllers\AttributeController@create'));
 Route::get('/admin/attribute/{id}', array('as' => 'editAttribute', 'uses' => 'Site\Admin\Controllers\AttributeController@edit'));
 Route::post('/admin/attribute/{id}', array('as' => 'updateAttribute', 'uses' => 'Site\Admin\Controllers\AttributeController@update'));

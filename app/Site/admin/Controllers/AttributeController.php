@@ -31,4 +31,16 @@ class AttributeController extends \BaseController {
 
         return Redirect::back();
     }
+
+    public function create()
+    {
+        $attribute = new Attribute;
+        $attribute->name = Input::get('name');
+
+        $attribute->save();
+
+        Session::flash('message', 'Attribute created.');
+
+        return Redirect::back();
+    }
 } 
