@@ -2,6 +2,7 @@
 namespace Site\Admin\Controllers;
 
 use Site\Admin\Models\Subject;
+use Site\Admin\Models\Type;
 
 class SubjectController extends \BaseController {
 
@@ -13,7 +14,12 @@ class SubjectController extends \BaseController {
 
 	public function edit($id)
 	{
-        return \View::make('admin::subject.edit')->with(array('id' => $id));
+        $subject = Subject::find($id);
+        $types = Type::lists('name', 'id');
+        return \View::make('admin::subject.edit')->with(array(
+                'subject' => $subject,
+                'types' => $types
+            ));
 	}
 
 	public function update($id)

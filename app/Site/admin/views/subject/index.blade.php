@@ -19,7 +19,7 @@
                             <td>{{ $subject->name }}</td>
                             <td>{{ $subject->type->name }}</td>
                             <td>
-                                {{ link_to('#', 'Edit', array('class' => 'btn btn-success')); }}
+                                {{ link_to('/admin/subject/'.$subject->id, 'Edit', array('class' => 'btn btn-success')); }}
                                 {{ link_to('#', 'Delete', array('class' => 'btn btn-danger')); }}
                             </td>
                         </tr>
