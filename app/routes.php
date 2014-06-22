@@ -11,4 +11,5 @@ Route::get('/admin/subject/{id}', array('as' => 'editSubject', 'uses' => 'Site\A
 Route::post('/admin/subject/{id}', array('as' => 'updateSubject', 'uses' => 'Site\Admin\Controllers\SubjectController@update'));
 Route::get('/admin/types', array('as' => 'types', 'uses' => 'Site\Admin\Controllers\TypeController@index'));
 Route::get('/admin/type/{id}', array('as' => 'editType', 'uses' => 'Site\Admin\Controllers\TypeController@edit'));
+Route::post('/admin/type/{id}', array('as' => 'updateType', 'uses' => 'Site\Admin\Controllers\TypeController@update'));
 Route::get('/admin/attributes', array('as' => 'attributes', 'uses' => 'Site\Admin\Controllers\AttributeController@index'));

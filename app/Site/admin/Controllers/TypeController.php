@@ -3,6 +3,8 @@ namespace Site\Admin\Controllers;
 
 use Site\Admin\Models\Type;
 use Site\Admin\Models\Attribute;
+use Input;
+use Redirect;
 
 class TypeController extends \BaseController {
 
@@ -23,16 +25,15 @@ class TypeController extends \BaseController {
 	}
 
 
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
-	{
-		//
-	}
+    public function update($id)
+    {
+        $type = Type::find($id);
+
+        $type->name = Input::get('name');
+        $type->save();
+
+        return Redirect::route('types'); // change later to direct back with flash message
+    }
 
 
 	/**

@@ -18,12 +18,19 @@
                             <tbody>
                             @foreach ($type->attributes as $attribute)
                                 <tr>
-                                    <td>{{ $attribute-> name }}</td><td>xx</td>
+                                    <td>{{ $attribute-> name }}</td><td>{{ link_to('#', 'Remove', array('class' => 'btn btn-danger btn-xs')); }}</td>
                                 </tr>
                             @endforeach
                             </tbody>
                         </table>
-                        {{ Form::select('attribute[]', $attributes, $type, array('class' => 'form-control')) }}
+                        <div class="row">
+                            <div class="col-md-9">
+                                {{ Form::select('attribute', $attributes, $type, array('class' => 'col-sm-4 form-control')) }}
+                            </div>
+                            <div class="col-md-3">
+                                {{ link_to('#', 'Add', array('class' => 'btn btn-success')); }}
+                            </div>
+                        </div>
                     </div>
                 </div>
                  <div class="form-group">
