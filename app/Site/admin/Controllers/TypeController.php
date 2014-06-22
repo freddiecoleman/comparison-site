@@ -2,6 +2,7 @@
 namespace Site\Admin\Controllers;
 
 use Site\Admin\Models\Type;
+use Site\Admin\Models\Attribute;
 
 class TypeController extends \BaseController {
 
@@ -11,35 +12,14 @@ class TypeController extends \BaseController {
         return \View::make('admin::type.index')->with(array('types' => $types));
 	}
 
-
-	public function create()
-	{
-		//
-	}
-
-
-
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		//
-	}
-
-
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
 	public function edit($id)
 	{
-		//
+        $type = Type::find($id);
+        $attributes = Attribute::lists('name', 'id');
+        return \View::make('admin::type.edit')->with(array(
+            'type' => $type,
+            'attributes' => $attributes
+        ));
 	}
 
 

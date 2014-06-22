@@ -25,7 +25,7 @@
                             </ul>
                             </td>
                             <td>
-                                {{ link_to('#', 'Edit', array('class' => 'btn btn-success')); }}
+                                {{ link_to('/admin/type/'.$type->id, 'Edit', array('class' => 'btn btn-success')); }}
                                 {{ link_to('#', 'Delete', array('class' => 'btn btn-danger')); }}
                             </td>
                         </tr>
