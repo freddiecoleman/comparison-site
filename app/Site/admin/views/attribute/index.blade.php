@@ -9,7 +9,7 @@
                     <thead>
                         <tr>
                             <th>Name</th>
-                            <th>Meh</th>
+                            <th>Data type</th>
                             <th>Tools</th>
                         </tr>
                     </thead>
@@ -18,7 +18,7 @@
                         <tr>
                             <td>{{ $attribute->name }}</td>
                             <td>
-                            xxx
+                            Number
                             </td>
                             <td>
                                 {{ link_to('/admin/attribute/'.$attribute->id, 'Edit', array('class' => 'btn btn-success btn-xs')); }}
