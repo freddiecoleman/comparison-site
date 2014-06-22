@@ -8,12 +8,12 @@ class SubjectController extends \BaseController {
 	public function index()
 	{
         $subjects = Subject::all();
-        return \View::make('admin::subject')->with(array('subjects' => $subjects));
+        return \View::make('admin::subject.index')->with(array('subjects' => $subjects));
 	}
 
 	public function edit($id)
 	{
-		//
+        return \View::make('admin::subject.edit')->with(array('id' => $id));
 	}
 
 	public function update($id)

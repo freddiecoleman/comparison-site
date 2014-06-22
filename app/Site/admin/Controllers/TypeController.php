@@ -8,7 +8,7 @@ class TypeController extends \BaseController {
 	public function index()
 	{
         $types = Type::all();
-        return \View::make('admin::type')->with(array('types' => $types));
+        return \View::make('admin::type.index')->with(array('types' => $types));
 	}
 
 

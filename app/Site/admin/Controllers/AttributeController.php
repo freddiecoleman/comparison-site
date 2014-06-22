@@ -8,6 +8,6 @@ class AttributeController extends \BaseController {
     public function index()
     {
         $attributes = Attribute::all();
-        return \View::make('admin::attribute')->with(array('attributes' => $attributes));
+        return \View::make('admin::attribute.index')->with(array('attributes' => $attributes));
     }
 } 
