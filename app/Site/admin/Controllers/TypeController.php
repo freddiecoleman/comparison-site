@@ -61,6 +61,20 @@ class TypeController extends \BaseController {
         return Redirect::back();
     }
 
+    public function create()
+    {
+
+        $type = new Type;
+        $type->name = Input::get('name');
+
+        $type->save();
+
+        Session::flash('message', 'Type created.');
+
+        return Redirect::back();
+
+    }
+
 
 	/**
 	 * Remove the specified resource from storage.

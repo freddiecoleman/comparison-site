@@ -40,7 +40,8 @@ class SubjectController extends \BaseController {
         return Redirect::back();
 	}
 
-    public function create(){
+    public function create()
+    {
         $subject = new Subject;
         $subject->name = Input::get('name');
         $subject->type_id = Input::get('type');
