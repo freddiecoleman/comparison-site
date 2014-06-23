@@ -19,7 +19,7 @@
                             <td>{{ $subject->name }}</td>
                             <td>{{ $subject->type->name }}</td>
                             <td>
-                                {{ link_to('/admin/subject/'.$subject->id.'/data', 'Data Structure', array('class' => 'btn btn-info btn-xs')) }}
+                                {{ link_to('/admin/subject/'.$subject->id.'/data', 'Data', array('class' => 'btn btn-info btn-xs')) }}
                                 {{ link_to('/admin/subject/'.$subject->id, 'Edit', array('class' => 'btn btn-success btn-xs')) }}
                                 {{ link_to('#', 'Delete', array('class' => 'btn btn-danger btn-xs')) }}
                             </td>
