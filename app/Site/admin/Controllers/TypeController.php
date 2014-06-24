@@ -75,16 +75,15 @@ class TypeController extends \BaseController {
 
     }
 
-
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
 	public function destroy($id)
 	{
-		//
+        $type = Type::find($id);
+        $type->attributes()->detach();
+        $type->delete();
+
+        Session::flash('message', 'Type deleted.');
+
+        return Redirect::back();
 	}
 
 
