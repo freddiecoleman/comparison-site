@@ -27,5 +27,6 @@ Route::post('/admin/attributes', array('as' => 'createAttribute', 'uses' => 'Sit
 
 Route::get('/admin/attribute/{id}', array('as' => 'editAttribute', 'uses' => 'Site\Admin\Controllers\AttributeController@edit'));
 Route::post('/admin/attribute/{id}', array('as' => 'updateAttribute', 'uses' => 'Site\Admin\Controllers\AttributeController@update'));
+Route::get('/admin/attribute/{id}/delete', array('as' => 'deleteAttribute', 'uses' => 'Site\Admin\Controllers\AttributeController@destroy'));
 
 Route::get('/admin/subject/{id}/data', array('as' => 'data', 'uses' => 'Site\Admin\Controllers\DataController@index'));

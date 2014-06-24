@@ -43,4 +43,15 @@ class AttributeController extends \BaseController {
 
         return Redirect::back();
     }
+
+    public function destroy($id)
+    {
+        $attribute = Attribute::find($id);
+        $attribute->types()->detach();
+        $attribute->delete();
+
+        Session::flash('message', 'Attribute deleted.');
+
+        return Redirect::back();
+    }
 } 
