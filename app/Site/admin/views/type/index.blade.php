@@ -30,7 +30,7 @@
                                 </td>
                                 <td>
                                     {{ link_to('/admin/type/'.$type->id, 'Edit', array('class' => 'btn btn-success btn-xs')); }}
-                                    {{ link_to('/admin/type/'.$type->id.'/delete', 'Delete', array('class' => 'btn btn-danger btn-xs')); }}
+                                    {{ link_to('/admin/type/'.$type->id.'/delete', 'Delete', array('class' => 'btn btn-danger btn-xs', 'onClick' => 'if(!confirm(\'If you delete this type, any subjects that use this type will have no type.\')){return false;};')); }}
                                 </td>
                             </tr>
                         @endif
