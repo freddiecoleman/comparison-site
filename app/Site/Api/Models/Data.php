@@ -1,5 +1,5 @@
 <?php
-namespace Site\Admin\Models;
+namespace Site\Api\Models;
 
 use Jenssegers\Mongodb\Model as Eloquent;
 
