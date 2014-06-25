@@ -79,7 +79,7 @@ class TypeController extends \BaseController {
 	{
         $type = Type::find($id);
         $type->attributes()->detach();
-        $type->delete();
+        //$type->delete();
 
         Session::flash('message', 'Type deleted.');
 
