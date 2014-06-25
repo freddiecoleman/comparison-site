@@ -33,3 +33,4 @@ Route::get('/admin/attribute/{id}/delete', array('as' => 'deleteAttribute', 'use
 Route::get('/admin/subject/{id}/data', array('as' => 'data', 'uses' => 'Site\Admin\Controllers\DataController@index'));
 
 Route::get('/api/{id}', array('as' => 'getData', 'uses' => 'Site\Api\Controllers\ApiController@index'));
+Route::post('/api/{id}', array('as' => 'storeData', 'uses' => 'Site\Api\Controllers\ApiController@store'));
