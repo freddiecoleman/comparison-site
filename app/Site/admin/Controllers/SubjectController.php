@@ -13,6 +13,7 @@ class SubjectController extends \BaseController {
 	{
         $subjects = Subject::all();
         $types = Type::lists('name', 'id');
+
         return \View::make('admin::subject.index')->with(array('subjects' => $subjects, 'types' => $types));
 	}
 
