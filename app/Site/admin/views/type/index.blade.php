@@ -18,20 +18,22 @@
                     </thead>
                     <tbody>
                         @foreach ($types as $type)
-                        <tr>
-                            <td>{{ $type->name }}</td>
-                            <td>
-                            <ul>
-                            @foreach ($type->attributes as $attribute)
-                                <li>{{ $attribute->name }}</li>
-                            @endforeach
-                            </ul>
-                            </td>
-                            <td>
-                                {{ link_to('/admin/type/'.$type->id, 'Edit', array('class' => 'btn btn-success btn-xs')); }}
-                                {{ link_to('/admin/type/'.$type->id.'/delete', 'Delete', array('class' => 'btn btn-danger btn-xs')); }}
-                            </td>
-                        </tr>
+                        @if($type->id != 1)
+                            <tr>
+                                <td>{{ $type->name }}</td>
+                                <td>
+                                <ul>
+                                @foreach ($type->attributes as $attribute)
+                                    <li>{{ $attribute->name }}</li>
+                                @endforeach
+                                </ul>
+                                </td>
+                                <td>
+                                    {{ link_to('/admin/type/'.$type->id, 'Edit', array('class' => 'btn btn-success btn-xs')); }}
+                                    {{ link_to('/admin/type/'.$type->id.'/delete', 'Delete', array('class' => 'btn btn-danger btn-xs')); }}
+                                </td>
+                            </tr>
+                        @endif
                         @endforeach
                         </tr>
                     </tbody>

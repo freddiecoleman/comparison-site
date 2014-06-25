@@ -3,6 +3,7 @@ namespace Site\Admin\Controllers;
 
 use Site\Admin\Models\Type;
 use Site\Admin\Models\Attribute;
+use Site\Admin\Models\Subject;
 use Input;
 use Redirect;
 use Session;
@@ -79,7 +80,13 @@ class TypeController extends \BaseController {
 	{
         $type = Type::find($id);
         $type->attributes()->detach();
-        //$type->delete();
+
+        // Need to reset all subjects that use this type via foreign key
+        // Had better make a warning message to explain that this will
+        // happen and have the user confirm
+        $subjects = Subject::where('type_id', '=', $id)->update(array('type_id' => 1));;
+
+        $type->delete();
 
         Session::flash('message', 'Type deleted.');
 

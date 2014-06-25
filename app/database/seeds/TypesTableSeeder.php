@@ -9,6 +9,10 @@ class TypesTableSeeder extends Seeder {
         if (is_null($types)){
 
             Site\Admin\Models\Type::create(
+                array('name' => 'None')
+            );
+
+            Site\Admin\Models\Type::create(
                 array('name' => 'Insurance')
             );
 
