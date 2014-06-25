@@ -1,6 +1,6 @@
 ## Comparison Site Builder
 
-This tool allows you to easily create a comparison website.
+This tool allows you to easily create a comparison website. No, not just a "price comparison website", you can compare anything you want.
 
  The site is configured in the admin panel by specifying the subjects (to be compared), the type of subject (e.g. insurance, smart phone, TV), and the attributes for the type (e.g. cost, weight, rating).
 
