@@ -22,3 +22,9 @@ The API is designed to accept any data that you input, even if you do not specif
 * Vagrant
 * Vaprobash
 * Homestead
+
+### Featured currently in development
+
+* Implement aliases into attribute creation screen in admin panel
+* Needs tons of error checking:
+** Make sure aliases follow guidelines (no special chars, no spaces)
