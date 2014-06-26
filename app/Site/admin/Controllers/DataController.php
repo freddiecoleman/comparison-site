@@ -18,7 +18,7 @@ class DataController extends \BaseController {
 
         foreach ($attributes as $attribute)
         {
-            array_push($activeColumns, $attribute->name);
+            array_push($activeColumns, $attribute->alias);
         }
 
         $data = Data::where('subjectID', '=', $id)->get();

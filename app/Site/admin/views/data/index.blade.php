@@ -17,7 +17,7 @@
                         @foreach ($data as $row)
                             <tr>
                             @foreach ($activeColumns as $column)
-                                <td>{{ $row->$column }}</td>
+                                <td>{{ (isset($row->$column)) ? $row->$column : 'null' }}</td>
                             @endforeach
                             </tr>
                         @endforeach
