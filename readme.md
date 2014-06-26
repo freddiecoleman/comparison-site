@@ -28,3 +28,4 @@ The API is designed to accept any data that you input, even if you do not specif
 * Implement aliases into attribute creation screen in admin panel
 * Needs tons of error checking
 * Make sure aliases follow guidelines (no special chars, no spaces)
+* Needs a front end for non-admins, complete with user creation and authentication!
