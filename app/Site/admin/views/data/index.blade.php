@@ -6,12 +6,9 @@
             <div class="col-md-12">
                 <h4>Subjects</h4><hr>
                 <table class="table table-striped">
-                        @foreach ($data as $row)
-                        {{ dd($row) }}
+                        @foreach ($attributes as $attribute)
                         <tr>
-                            @foreach($row as $column=>$value)
-                            <th>{{ $column }}</th>
-                            @endforeach
+                            <td>{{ $attribute->name }}</td>
                         </tr>
                         @endforeach
                 </table>

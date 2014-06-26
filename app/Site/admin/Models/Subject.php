@@ -11,5 +11,10 @@ class Subject extends \Eloquent {
     {
         return $this->belongsTo('Site\Admin\Models\Type');
     }
+
+    public function attributes()
+    {
+        return $this->hasManyThrough('Site\Admin\Models\Attribute', 'Site\Admin\Models\Type');
+    }
 }
 
