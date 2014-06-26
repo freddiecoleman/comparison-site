@@ -8,7 +8,7 @@ class ApiController extends \BaseController {
 
     public function index($id)
     {
-        $data = Data::all();
+        $data = Data::where('subjectID', '=', $id)->get();
 
         return \Response::json($data);
     }
@@ -19,9 +19,13 @@ class ApiController extends \BaseController {
 
         $submit = new Data;
 
+        $submit->subjectID = $id;
+
         foreach ($data as $key=>$value)
         {
-            $submit->$key = $value;
+            if($key != "subjectID"){
+                $submit->$key = $value;
+            }
         }
 
         if($submit->save())
