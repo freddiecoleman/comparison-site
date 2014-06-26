@@ -29,3 +29,4 @@ The API is designed to accept any data that you input, even if you do not specif
 * Needs tons of error checking
 * Make sure aliases follow guidelines (no special chars, no spaces)
 * Needs a front end for non-admins, complete with user creation and authentication!
+* Database seeding into MongoDB to have some decent test data available
