@@ -21,13 +21,13 @@ class DataController extends \BaseController {
             array_push($activeColumns, $attribute->name);
         }
 
-        $data = Data::where('subjectID', '=', $id)->get()->toArray();
+        $data = Data::where('subjectID', '=', $id)->get();
 
         $allColumns = array(); // all columns that have been entered into the data (it's schemaless)
 
         foreach ($data as $row)
         {
-            foreach ($row as $columnName=>$data)
+            foreach ($row as $columnName=>$value)
             {
                 if (!in_array($columnName, $allColumns) && $columnName != '_id' && $columnName != 'updated_at' && $columnName != 'created_at' && $columnName != 'subjectID') // only add each column once and blacklist mongoDB columns that arent needed
                 {
@@ -38,9 +38,7 @@ class DataController extends \BaseController {
 
         $extraColumns = array_diff($allColumns, $activeColumns); // the columns in the dataset that are not attributes assigned to the subject
 
-        dd($extraColumns);
-
-        return \View::make('admin::data.index')->with(array('attributes' => $attributes));
+        return \View::make('admin::data.index')->with(array('activeColumns' => $activeColumns, 'extraColumns' => $extraColumns, 'data' => $data));
     }
 
 }
