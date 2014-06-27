@@ -26,10 +26,15 @@
             </div>
             {{ Form::close() }}
         </div>
-        @foreach ($extraColumns as $extraColumn)
-        <li>{{ $extraColumn }}</li>
-        @endforeach
-
-
+        <div class="row">
+            <div class="col-md-12">
+                <h4>Columns not in use</h4><hr>
+                <ul>
+                    @foreach ($extraColumns as $extraColumn)
+                    <li>{{ $extraColumn }} - Create attribute for this columns / Assign as column</li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
     </div><!-- /.container -->
 @stop
