@@ -31,7 +31,7 @@
                 <h4>Columns not in use</h4><hr>
                 <ul>
                     @foreach ($extraColumns as $extraColumn)
-                    <li>{{ $extraColumn }} - Create attribute for this columns / Assign as column</li>
+                    <li>{{ $extraColumn }} - Create attribute / Assign as column</li>
                     @endforeach
                 </ul>
             </div>
