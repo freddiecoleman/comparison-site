@@ -26,6 +26,9 @@
             </div>
             {{ Form::close() }}
         </div>
+        @foreach ($extraColumns as $extraColumn)
+        <li>{{ $extraColumn }}</li>
+        @endforeach
 
 
     </div><!-- /.container -->

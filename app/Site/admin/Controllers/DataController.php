@@ -27,7 +27,7 @@ class DataController extends \BaseController {
 
         foreach ($data as $row)
         {
-            foreach ($row as $columnName=>$value)
+            foreach ($row->toArray() as $columnName=>$value)
             {
                 if (!in_array($columnName, $allColumns) && $columnName != '_id' && $columnName != 'updated_at' && $columnName != 'created_at' && $columnName != 'subjectID') // only add each column once and blacklist mongoDB columns that arent needed
                 {
