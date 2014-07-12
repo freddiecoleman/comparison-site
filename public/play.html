@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Playing with voice recognition</title>
+  
+  <script src="annyang.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script>
+  if (annyang) {
+
+    var commands = {
+      'hello': function() {
+        alert('working');
+      }
+    };
+annyang.debug();
+    // Add our commands to annyang
+    annyang.addCommands(commands);
+
+    // Start listening. You can call this here, or attach this call to an event, button, etc.
+    annyang.start();
+  } else {
+    alert('error');
+  }
+  </script>
+</head>
+<body>
+  
+  <div id="tpsreport">yoyoyo</div>
+</body>
+</html>
